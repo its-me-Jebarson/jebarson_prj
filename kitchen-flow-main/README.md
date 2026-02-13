@@ -1,73 +1,186 @@
-# Welcome to your Lovable project
+# 🍽️ Restaurant Kitchen Display System (KDS)
 
-## Project info
+## 📌 Project Overview
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The **Restaurant Kitchen Display System (KDS)** is a real-time food service management application designed to streamline kitchen operations, reduce order latency, and improve staff coordination.
 
-## How can I edit this code?
+This system replaces traditional paper tickets with a digital display that helps chefs prioritize tasks, track order progress, and maintain efficiency during peak hours.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🚀 Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### ✅ Core Features
 
-Changes made via Lovable will be committed automatically to this repo.
+* Real-time order updates
+* Smart order prioritization
+* Color-coded order statuses (New, Preparing, Ready, Delayed)
+* Drag-and-drop workflow for status updates
+* Multi-screen kitchen support (Grill, Drinks, Desserts)
+* Automated alerts for overdue orders
 
-**Use your preferred IDE**
+### 📊 Analytics Dashboard
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+* Average preparation time
+* Peak business hours
+* Order trends
+* Staff performance insights
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 🤖 AI-Powered Capabilities
 
-Follow these steps:
+* Predict cooking times
+* Detect kitchen bottlenecks
+* Recommend workflow optimizations
+* Forecast demand patterns
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🛠️ Tech Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
+**Frontend:** React + Tailwind CSS
+**Backend:** Node.js + Express
+**Database:** MongoDB / PostgreSQL
+**Real-Time Communication:** Socket.io
+**AI Integration:** External AI API for prediction and optimization
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+---
+
+## 🏗️ System Architecture
+
+```
+Frontend (React)
+      ↓
+Backend API (Node.js / Express)
+      ↓
+Database (MongoDB/PostgreSQL)
+      ↓
+Real-time Server (Socket.io)
+      ↓
+AI Service (Prediction Engine)
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📂 Folder Structure
 
-**Use GitHub Codespaces**
+```
+restaurant-kds/
+│
+├── client/              # React frontend
+├── server/              # Node.js backend
+├── models/              # Database schemas
+├── routes/              # API routes
+├── controllers/         # Business logic
+├── sockets/             # Real-time communication
+├── ai/                  # AI integration
+└── README.md
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## ⚙️ Installation & Setup
 
-This project is built with:
+### 1️⃣ Clone the Repository
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+git clone https://github.com/your-username/restaurant-kds.git
+cd restaurant-kds
+```
 
-## How can I deploy this project?
+### 2️⃣ Install Dependencies
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+```bash
+# Backend
+cd server
+npm install
 
-## Can I connect a custom domain to my Lovable project?
+# Frontend
+cd ../client
+npm install
+```
 
-Yes, you can!
+### 3️⃣ Configure Environment Variables
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Create a `.env` file inside the server folder:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```
+PORT=5000
+DATABASE_URL=your_database_url
+AI_API_KEY=your_api_key
+```
+
+⚠️ **Important:** Never commit `.env` files to version control.
+
+---
+
+### 4️⃣ Run the Application
+
+```bash
+# Start backend
+cd server
+npm start
+
+# Start frontend
+cd client
+npm start
+```
+
+The app should now be running on:
+
+👉 `http://localhost:3000`
+
+---
+
+## 🔐 Security Best Practices
+
+* Keep API keys private
+* Use HTTPS in production
+* Implement authentication & role-based access
+* Validate all API inputs
+* Enable rate limiting
+
+---
+
+## 🌟 Advanced Enhancements (Future Scope)
+
+* Voice notifications for ready orders
+* Offline mode with automatic sync
+* Tablet-optimized UI
+* AI-driven inventory management
+* Integration with POS systems
+
+---
+
+## 🎯 Learning Outcomes
+
+By building this project, you will gain experience in:
+
+* Full-stack development
+* Real-time systems
+* AI integration
+* Database design
+* Performance optimization
+* Production-level architecture
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+Feel free to fork this repository and submit pull requests.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+👨‍💻 Author
+
+Jebarson P
+B.Tech Computer Science Engineering
+2nd Year Student
+---
+
