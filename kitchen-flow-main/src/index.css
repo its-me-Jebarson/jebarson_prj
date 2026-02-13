@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 10%;
+    --foreground: 210 20% 92%;
+
+    --card: 220 18% 14%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 220 18% 14%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 210 100% 56%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 16% 22%;
+    --secondary-foreground: 210 20% 85%;
+
+    --muted: 220 14% 18%;
+    --muted-foreground: 215 12% 55%;
+
+    --accent: 36 100% 55%;
+    --accent-foreground: 220 20% 10%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 210 20% 95%;
+
+    --border: 220 14% 22%;
+    --input: 220 14% 22%;
+    --ring: 210 100% 56%;
+
+    --radius: 0.75rem;
+
+    /* KDS Status Colors */
+    --status-new: 210 100% 56%;
+    --status-preparing: 36 100% 55%;
+    --status-ready: 142 70% 45%;
+    --status-delayed: 0 72% 55%;
+
+    /* KDS Custom */
+    --kds-surface: 220 16% 12%;
+    --kds-surface-elevated: 220 16% 16%;
+    --kds-glow-blue: 210 100% 56%;
+    --kds-glow-amber: 36 100% 55%;
+    --kds-glow-green: 142 70% 45%;
+    --kds-glow-red: 0 72% 55%;
+    --kds-timer: 210 20% 75%;
+
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 210 20% 85%;
+    --sidebar-primary: 210 100% 56%;
+    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-accent: 220 16% 16%;
+    --sidebar-accent-foreground: 210 20% 92%;
+    --sidebar-border: 220 14% 18%;
+    --sidebar-ring: 210 100% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .kds-glow-new {
+    box-shadow: 0 0 20px -4px hsl(var(--status-new) / 0.4),
+                0 4px 12px -2px hsl(var(--status-new) / 0.2);
+  }
+  .kds-glow-preparing {
+    box-shadow: 0 0 20px -4px hsl(var(--status-preparing) / 0.4),
+                0 4px 12px -2px hsl(var(--status-preparing) / 0.2);
+  }
+  .kds-glow-ready {
+    box-shadow: 0 0 20px -4px hsl(var(--status-ready) / 0.4),
+                0 4px 12px -2px hsl(var(--status-ready) / 0.2);
+  }
+  .kds-glow-delayed {
+    box-shadow: 0 0 20px -4px hsl(var(--status-delayed) / 0.5),
+                0 4px 12px -2px hsl(var(--status-delayed) / 0.3);
+    animation: pulse-delayed 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-delayed {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+  }
+
+  .kds-card-enter {
+    animation: card-slide-in 0.3s ease-out;
+  }
+
+  @keyframes card-slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px) scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
